@@ -64,7 +64,7 @@ public class DienThoaiRepository {
 
     public List<DienThoai> sapXepTheoSoLuongKho(String sort) {
         String sql = "select * from san_pham order by so_luong_kho " + sort; // day la cau lenh sql, ten table hoac column phai viet giong sql, nho phai co dau cach doan cuoi
-        Query query = session.createNativeQuery(sql,DienThoai.class); //hql dung createQuery, sql thi phai co them Native (createNativeQuery)
+        Query query = session.createNativeQuery(sql, DienThoai.class); //hql dung createQuery, sql thi phai co them Native (createNativeQuery)
         return query.getResultList();
     }
 

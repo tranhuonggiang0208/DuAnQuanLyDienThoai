@@ -53,17 +53,8 @@
         }
     </style>
 </head>
+
 <body>
-
-<c:if test="${not empty error}">
-    <p style="color: red">${error}</p>
-</c:if>
-
-<c:if test="${not empty sessionScope.message}">
-    <p style="color: green">${sessionScope.message}</p>
-    <c:remove var="message" scope="session"></c:remove>
-</c:if>
-
 <form method="post" action="/san-pham/add">
     Id: <input type="text" name="id" value="${sanPham.id}" readonly><br>
     Ten san pham: <input type="text" name="tenSanPham" value="${sanPham.tenSanPham}"><br>

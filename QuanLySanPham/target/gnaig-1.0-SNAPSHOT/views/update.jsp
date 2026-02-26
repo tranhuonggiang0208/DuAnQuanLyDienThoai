@@ -56,17 +56,8 @@
     </style>
 </head>
 
+
 <body>
-
-<c:if test="${not empty error}">
-    <p style="color: red">${error}</p>
-</c:if>
-
-<c:if test="${not empty sessionScope.message}">
-    <p style="color: green">${sessionScope.message}</p>
-    <c:remove var="message" scope="session"></c:remove>
-</c:if>
-
 <form method="post" action="/san-pham/update">
     Id: <input type="text" name="id" value="${sanPham.id}" readonly><br>
     Ten san pham: <input type="text" name="tenSanPham" value="${sanPham.tenSanPham}"><br>
@@ -84,9 +75,5 @@
     </select>
     <button type="submit">Update</button>
 </form>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

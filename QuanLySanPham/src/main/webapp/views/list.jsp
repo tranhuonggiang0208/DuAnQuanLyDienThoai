@@ -64,15 +64,6 @@
 <body>
 <h1>QUẢN LÝ ĐIỆN THOẠI</h1>
 
-<c:if test="${not empty error}">
-    <p style="color: red">${error}</p>
-</c:if>
-
-<c:if test="${not empty sessionScope.message}">
-    <p style="color: green">${sessionScope.message}</p>
-    <c:remove var="message" scope="session"></c:remove>
-</c:if>
-
 <form method="get" action="/san-pham/find">
     So luong kho: <input type="number" name="soLuongKho">
     <button type="submit">Tim kiem</button>
@@ -166,7 +157,6 @@ ${sanPham.danhMuc.trangThai == false ? "checked" : ""}>
 <a href="${pageContext.request.contextPath}/san-pham/phan-trang?page=${totalPages - 1}">
     Last
 </a>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
